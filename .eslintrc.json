@@ -6,7 +6,7 @@
     "node": true,
     "commonjs": true
   },
-  "extends": ["eslint:recommended", "airbnb" ],
+  "extends": ["eslint:recommended", "prettier" ],
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
@@ -36,6 +36,7 @@
     "react/destructuring-assignment": ["off", "always"],
     "import/prefer-default-export": "off",
     "jsx-quotes": ["error", "prefer-single"],
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    "no-useless-constructor": "off"
   }
 }

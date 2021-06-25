@@ -1,51 +1,37 @@
-import { AppLayout } from "@/layouts";
-import Home from "@pages/Home";
-import Category from "@pages/Category";
-import User from "@pages/User";
-import Cart from "@pages/Cart";
+import { AppLayout } from '@/layouts'
+import Home from '@pages/home'
+import User from '@pages/user'
 
 const baseRoutes = [
   {
-    path: "/",
+    path: '/',
     component: AppLayout,
     exact: true,
-    routes: [],
+    routes: []
   },
   {
-    path: "/propaganda",
+    path: '/propaganda',
     component: AppLayout,
     routes: [
       {
-        path: "/propaganda/home",
+        path: '/propaganda/home',
         component: Home,
         meta: {
-          title: "商城首页",
-          isShowNavbar: false,
+          title: '首页',
+          isShowNavbar: true,
           isBack: false,
-          isShowTabbar: true,
+          isShowTabbar: true
         },
-        routes: [],
+        routes: []
       },
       {
-        path: "/propaganda/category",
-        component: Category,
-        meta: { title: "商品分类", isBack: false, isShowTabbar: true },
-        routes: [],
-      },
-      {
-        path: "/propaganda/cart",
-        component: Cart,
-        meta: { title: "购物车", isBack: false, isShowTabbar: true },
-        routes: [],
-      },
-      {
-        path: "/propaganda/user",
+        path: '/propaganda/user',
         component: User,
-        meta: { title: "我的", isBack: false, isShowTabbar: true },
-        routes: [],
-      },
-    ],
-  },
-];
+        meta: { title: '个人中心', isBack: false, isShowTabbar: true },
+        routes: []
+      }
+    ]
+  }
+]
 
-export default baseRoutes;
+export default baseRoutes

@@ -2,19 +2,19 @@
  * @Description: user auth
  */
 
-const TokenKey = "rrtoken";
+import defaultSettings from '@/defaultSettings'
 
 function getToken() {
-  return window.localStorage.getItem(TokenKey) || null;
+  return window.localStorage.getItem(defaultSettings.tokenKey) || null
 }
 function setToken(key) {
   if (!key) {
-    throw Error("Token not passed in");
+    throw Error('Token not passed in')
   }
-  window.localStorage.setItem(TokenKey, key);
+  window.localStorage.setItem(defaultSettings.tokenKey, key)
 }
 function removeToken() {
-  window.localStorage.removeItem(TokenKey);
+  window.localStorage.removeItem(defaultSettings.tokenKey)
 }
 
-export { getToken, setToken, removeToken };
+export { getToken, setToken, removeToken }

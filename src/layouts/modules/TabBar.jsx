@@ -3,7 +3,7 @@ import React from 'react';
 
 const PageTabBar = ({ history, location, meta }) => {
   const tabbarItemClick = (path) => {
-    history.push(`/base/${path}`);
+    history.push(`/propaganda/${path}`);
   };
   if (meta.isShowTabbar) {
     return (
@@ -17,28 +17,14 @@ const PageTabBar = ({ history, location, meta }) => {
             <TabBar.Item
               icon={<span className='iconfont yangtabbarhome' />}
               selectedIcon={<span className='iconfont yangtabbarhomeselect' />}
-              selected={location.pathname === '/base/home'}
+              selected={location.pathname === '/propaganda/home'}
               onPress={() => tabbarItemClick('home')}
               title='首页'
             />
             <TabBar.Item
-              icon={<span className='iconfont yangTABbar1' />}
-              selectedIcon={<span className='iconfont yangTABbar-fill2' />}
-              selected={location.pathname === '/base/category'}
-              onPress={() => tabbarItemClick('category')}
-              title='分类'
-            />
-            <TabBar.Item
-              icon={<span className='iconfont yangTABbar' />}
-              selectedIcon={<span className='iconfont yangTABbar-fill1' />}
-              selected={location.pathname === '/base/cart'}
-              onPress={() => tabbarItemClick('cart')}
-              title='购物车'
-            />
-            <TabBar.Item
               icon={<span className='iconfont yangicontabbarmyup' />}
               selectedIcon={<span className='iconfont yangTABbar-fill' />}
-              selected={location.pathname === '/base/user'}
+              selected={location.pathname === '/propaganda/user'}
               onPress={() => tabbarItemClick('user')}
               title='我的'
             />

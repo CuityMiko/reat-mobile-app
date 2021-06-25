@@ -1,19 +1,19 @@
-import { BaseLayout } from "@/layouts";
-import Login from "@pages/Login";
+import { BaseLayout } from '@/layouts'
+import Login from '@pages/login'
 
 const appRoutes = [
   {
-    path: "/app",
+    path: '/app',
     component: BaseLayout,
     routes: [
       {
-        path: "/app/login",
-        meta: { title: "login", icon: "login", auth: false },
+        path: '/app/login',
+        meta: { title: '登录页', icon: 'login', auth: false },
         component: Login,
-        routes: [],
-      },
-    ],
-  },
-];
+        routes: []
+      }
+    ]
+  }
+]
 
-export default appRoutes;
+export default appRoutes
